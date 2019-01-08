@@ -1,0 +1,12 @@
+
+<%= form_for @student  do |f| %>
+    <%= f.text_area :first_name, :last_name, :age, :education %>
+  
+  
+    <br>
+  
+    <%= f.collection_select(:user_id, User.all, :id, :username) %>
+  
+    <br>
+    <%= f.submit "Update" %>
+  <% end %>
