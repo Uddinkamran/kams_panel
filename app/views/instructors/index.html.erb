@@ -10,8 +10,7 @@
 
   <br>
 
-  <%= f.collection_select(:cohort_id, Cohort.all, :id, :cohort_name) %>
-  <%= f.collection_select(:course_id, Course.all, :id, :course_name) %>
+
 
   <br>
   <%= f.submit "Create" %>
@@ -22,7 +21,7 @@
 <div>
   <% @instructors.each do |instructor| %>
     <p> <%= instructor.first_name %> <%= instructor.last_name %> <%= instructor.age %> <%= instructor.education %> <%= instructor.salary %></p>
-    <p> <b> Cohort by <%= instructor.cohorts.cohort_name %> </b> </p>
+    
     <%= link_to "DELETE", '/instructors/' + instructor.id.to_s, method: :delete, class: "btn" %>
     <%= link_to  "EDIT", edit_instructor_path(instructor) %>
     <br>

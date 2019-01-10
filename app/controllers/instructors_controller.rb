@@ -6,6 +6,7 @@ class InstructorsController < ApplicationController
   
     def create
       @temp = Instructor.create(post_params)
+      @cohorts.instructor << (@temp)
       if @temp.valid?
         flash[:notice] = "Instructor CREATED!"
       else
