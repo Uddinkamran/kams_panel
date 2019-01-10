@@ -6,7 +6,8 @@ class CreateInstructors < ActiveRecord::Migration[5.2]
       t.integer :age
       t.string :education
       t.string :salary
-      t.references :cohort
+      t.integer :cohort_id
+      t.integer :course_id
 
       t.timestamps
     end
