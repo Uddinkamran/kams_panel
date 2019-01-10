@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
+  # get 'courses/index'
+  # get 'courses/edit'
+  # get 'courses/update'
+  # get 'index/edit'
+  # get 'index/update'
+  # get 'instructors/index'
+  # get 'instructors/edit'
+  # get 'instructors/update'
+  # get 'instructors/destroy'
   root to: 'welcome#index'
   # get 'posts/index'
   # get 'posts/edit'
@@ -11,5 +20,7 @@ Rails.application.routes.draw do
   # put '/post/:id' => 'posts#update'
 
   resources :students
+  resources :instructors
+  resources :courses
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

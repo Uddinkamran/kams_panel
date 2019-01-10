@@ -10,3 +10,8 @@ User.create(username: 'Kam', email: 'kam@kam.com', password: '123')
 
 Student.create(first_name: 'Sam', last_name: 'Lam', age: 99, education: 'College grad', user_id: 1)
 
+Instructor.create(first_name: 'Alex', last_name: 'Zhe', age: 76, education: 'phd', salary: '134000', user_id: 1)
+
+Course.create(course_name: 'Computer Programming 2100', hours: 200, user_id: 1)
+
+

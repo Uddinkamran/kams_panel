@@ -1,0 +1,16 @@
+
+<%= form_for @instructor  do |f| %>
+    <%= f.text_area :first_name %>
+    <%= f.text_area :last_name %>
+    <%= f.text_area :age %>
+    <%= f.text_area :education %>
+    <%= f.text_area :salary %>
+  
+  
+    <br>
+  
+    <%= f.collection_select(:user_id, User.all, :id, :username) %>
+  
+    <br>
+    <%= f.submit "Update" %>
+  <% end %>

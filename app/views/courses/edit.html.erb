@@ -1,0 +1,13 @@
+<%= form_for @course  do |f| %>
+    <%= f.text_area :course_name %>
+    <%= f.text_area :hours %>
+
+  
+  
+    <br>
+  
+    <%= f.collection_select(:user_id, User.all, :id, :username) %>
+  
+    <br>
+    <%= f.submit "Update" %>
+  <% end %>

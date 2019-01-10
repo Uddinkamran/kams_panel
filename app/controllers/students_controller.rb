@@ -7,7 +7,7 @@ class StudentsController < ApplicationController
   def create
     @temp = Student.create(post_params)
     if @temp.valid?
-      flash[:notice] = "POST CREATED!"
+      flash[:notice] = "Student CREATED!"
     else
       flash[:notice] = "YOU TYPED TOO MUCH!"
     end
