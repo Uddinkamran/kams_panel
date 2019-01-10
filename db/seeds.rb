@@ -14,4 +14,4 @@ Instructor.create(first_name: 'Alex', last_name: 'Zhe', age: 76, education: 'phd
 
 Course.create(course_name: 'Computer Programming 2100', hours: 200, user_id: 1)
 
-
+Cohort.create(cohort_name: 'Class 2018', start_date: 'May 1, 2018', end_date: 'August 1, 2018', user_id: 1)

@@ -1,0 +1,28 @@
+<h1>Cohorts</h1>
+
+<%= form_for @new_cohort, html: {class: "something", id: "fizal"} do |f| %>
+ <p> Cohort Name <%= f.text_area :cohort_name, cols: 15, rows: 1 %> </p>
+ <p> Start Date <%= f.text_area :start_date, cols: 15, rows: 1 %></p>
+ <p> End Date <%= f.text_area :end_date, cols: 15, rows: 1 %></p>
+
+
+  <br>
+
+  <%= f.collection_select(:user_id, User.all, :id, :username) %>
+
+  <br>
+  <%= f.submit "Create" %>
+<% end %>
+
+<p id="count_message"> </p>
+
+<div>
+  <% @cohorts.each do |cohort| %>
+    <p> <%= cohort.cohort_name %> <%= cohort.start_date %> <%= cohort.end_date %> </p>
+
+    <%= link_to "DELETE", '/cohorts/' + cohort.id.to_s, method: :delete, class: "btn" %>
+    <%= link_to  "EDIT", edit_cohort_path(cohort) %>
+    <br>
+    <br>
+  <% end %>
+</div>

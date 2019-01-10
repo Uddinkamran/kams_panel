@@ -24,7 +24,6 @@
 
     <%= link_to "DELETE", '/instructors/' + instructor.id.to_s, method: :delete, class: "btn" %>
     <%= link_to  "EDIT", edit_instructor_path(instructor) %>
-    <p> <b> Instructor by <%= instructor.user.username %> </b> </p>
     <br>
     <br>
   <% end %>

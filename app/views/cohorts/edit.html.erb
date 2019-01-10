@@ -1,0 +1,14 @@
+<%= form_for @cohort  do |f| %>
+    <%= f.text_area :cohort_name %>
+    <%= f.text_area :start_date %>
+    <%= f.text_area :end_date %>
+
+  
+  
+    <br>
+  
+    <%= f.collection_select(:user_id, User.all, :id, :username) %>
+  
+    <br>
+    <%= f.submit "Update" %>
+  <% end %>

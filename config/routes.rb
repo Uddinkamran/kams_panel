@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  # get 'courses/index'
+  # get 'cohorts/index'
+  # get 'cohorts/edit'
+  # get 'cohorts/update'
+  # # get 'courses/index'
   # get 'courses/edit'
   # get 'courses/update'
   # get 'index/edit'
@@ -18,10 +21,14 @@ Rails.application.routes.draw do
   # post '/posts' => 'posts#create'
   # get '/post/:id' => 'posts#destroy'
   # put '/post/:id' => 'posts#update'
+  
 
-  resources :students
-  resources :instructors
-  resources :courses
   resources :cohorts
+  resources :courses
+  resources :instructors
+  resources :students
+  
+ 
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
