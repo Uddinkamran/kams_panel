@@ -7,7 +7,7 @@
 
   <br>
 
-  <%= f.collection_select(:user_id, User.all, :id, :username) %>
+  <%= f.collection_select(:cohort_id, Cohort.all, :id, :cohort_name) %>
 
   <br>
   <%= f.submit "Create" %>

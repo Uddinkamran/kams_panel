@@ -20,6 +20,11 @@ ActiveRecord::Schema.define(version: 2019_01_10_190134) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "cohorts_courses", force: :cascade do |t|
+    t.integer "cohort_id"
+    t.integer "course_id"
+  end
+
   create_table "cohorts_instructors", force: :cascade do |t|
     t.integer "cohort_id"
     t.integer "instructor_id"

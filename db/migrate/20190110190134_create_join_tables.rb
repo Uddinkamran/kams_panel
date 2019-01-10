@@ -11,5 +11,10 @@ class CreateJoinTables < ActiveRecord::Migration[5.2]
       t.integer :cohort_id
       t.integer :student_id
     end
+    
+    create_table :cohorts_courses do |t|
+      t.integer :cohort_id
+      t.integer :course_id
+    end
   end
 end
