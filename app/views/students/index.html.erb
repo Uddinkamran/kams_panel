@@ -1,3 +1,5 @@
+
+
 <h1>Student</h1>
 
 <%= form_for @new_student, html: {class: "something", id: "fizal"} do |f| %>
@@ -7,24 +9,32 @@
  <p> Education <%= f.text_area :education, cols: 15, rows: 1 %></p>
 
 
-  <br>
-
-  
-
-  <br>
   <%= f.submit "Create" %>
 <% end %>
 
-<p id="count_message"> </p>
 
-<div>
+
+<div class="ui container">
+<table class="ui striped table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Education</th>
+      <th>Delete</th>
+      <th>Edit</th>
+    </tr>
+  </thead>
   <% @students.each do |student| %>
-    <p> <%= student.first_name %> <%= student.last_name %> <%= student.age %> <%= student.education %></p>
-
-    <%= link_to "DELETE", '/students/' + student.id.to_s, method: :delete, class: "btn" %>
-    <%= link_to  "EDIT", edit_student_path(student) %>
- 
-    <br>
-    <br>
-  <% end %>
+  <tbody>
+    <tr>
+      <td><%= student.first_name %></td>
+      <td><%= student.age %></td>
+      <td><%= student.education %></td>
+      <td><%= link_to "DELETE", '/students/' + student.id.to_s, method: :delete, class: "btn" %></td>
+      <td><%= link_to  "EDIT", edit_student_path(student) %></td>
+    </tr>
+  </tbody>
+   <% end %>
+</table>
 </div>
